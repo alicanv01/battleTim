@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.displayNone{
+    display: none!important;
+}
+
+body{
+    background: #322626;
+    color: aliceblue;
+}
+
+#homePage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    padding: 1rem;
+}
+
+
+#champSelectPage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#champList{
+    width: 1000px;
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.champSelectCard{
+    background-color: rgba(245, 245, 220, 0);  
+    
+}
+
+.champSelectCard:hover{
+    box-shadow: 0px 0px 10px 4px #000000;
+}
+
+.champSelectJ1{    
+    border: solid red 5px;
+}
+.champSelectJ2{
+    border: solid blue 5px;
+}
+
+
+.inputchampSelectCard{
+    display: none;
+}
+
+.inputchampSelectCard:checked + label
+{
+  background: #000;
+}
