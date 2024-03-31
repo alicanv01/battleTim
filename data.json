@@ -2,209 +2,107 @@
     "champs": {
         
             "champId1": {
-                "champName": "one-piece--kaido-and-kanabo.png",
+                "champName": "Anik",
                 "champPv": 15,
                 "champAttack": 4,
-                "champImg": "img/champImg/one-piece--kaido-and-kanabo.png"
+                "champImg": "img/champImg/anik.png"
             },
             "champId2": {
-                "champName": "one-piece-bepo.png",
+                "champName": "aylin",
                 "champPv": 20,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-bepo.png"
+                "champImg": "img/champImg/aylin.png"
             },
             "champId3": {
-                "champName": "one-piece-boa-hancock-and-salome.png",
+                "champName": "ayse",
                 "champPv": 16,
                 "champAttack": 4,
-                "champImg": "img/champImg/one-piece-boa-hancock-and-salome.png"
+                "champImg": "img/champImg/ayse.png"
             },
             "champId4": {
-                "champName": "one-piece-brook-and-violin.png",
+                "champName": "bahar",
                 "champPv": 20,
                 "champAttack": 5,
-                "champImg": "img/champImg/one-piece-brook-and-violin.png"
+                "champImg": "img/champImg/bahar.png"
             },
             "champId5": {
-                "champName": "one-piece-buggy.png",
+                "champName": "ciha",
                 "champPv": 18,
                 "champAttack": 4,
-                "champImg": "img/champImg/one-piece-buggy.png"
+                "champImg": "img/champImg/ciha.png"
             },
             "champId6": {
-                "champName": "one-piece-butchie.png",
+                "champName": "enzo",
                 "champPv": 17,
                 "champAttack": 4,
-                "champImg": "img/champImg/one-piece-butchie.png"
+                "champImg": "img/champImg/enzo.png"
             },
             "champId7": {
-                "champName": "one-piece-cavendish-and-durandal.png",
+                "champName": "fatma",
                 "champPv": 15,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-cavendish-and-durandal.png"
+                "champImg": "img/champImg/fatma.png"
             },
             "champId8": {
-                "champName": "one-piece-charlotte-katakuri-and-spearmanship.png",
+                "champName": "hasan",
                 "champPv": 18,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-charlotte-katakuri-and-spearmanship.png"
+                "champImg": "img/champImg/hasan.png"
             },
             "champId9": {
-                "champName": "one-piece-chopper-and-cherry-blossom.png",
+                "champName": "hulya",
                 "champPv": 20,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-chopper-and-cherry-blossom.png"
+                "champImg": "img/champImg/hulya.png"
             },
             "champId10": {
-                "champName": "one-piece-donquixote-doflamingo-and-string.png",
+                "champName": "isia",
                 "champPv": 19,
                 "champAttack": 5,
-                "champImg": "img/champImg/one-piece-donquixote-doflamingo-and-string.png"
+                "champImg": "img/champImg/isia.png"
             },
             "champId11": {
-                "champName": "one-piece-dracule-mihawk-and-black-sword-yoru.png",
+                "champName": "iso",
                 "champPv": 18,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-dracule-mihawk-and-black-sword-yoru.png"
+                "champImg": "img/champImg/iso.png"
             },
             "champId12": {
-                "champName": "one-piece-edward-newgate-and-murakumogiri.png",
+                "champName": "lea",
                 "champPv": 17,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-edward-newgate-and-murakumogiri.png"
+                "champImg": "img/champImg/lea.png"
             },
             "champId13": {
-                "champName": "one-piece-franky.png",
+                "champName": "melanie",
                 "champPv": 20,
                 "champAttack": 4,
-                "champImg": "img/champImg/one-piece-franky.png"
+                "champImg": "img/champImg/melanie.png"
             },
             "champId14": {
-                "champName": "one-piece-jinbe-and-knight-of-the-sea-string.png",
+                "champName": "miray",
                 "champPv": 17,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-jinbe-and-knight-of-the-sea-string.png"
+                "champImg": "img/champImg/miray.png"
             },
             "champId15": {
-                "champName": "one-piece-king-and-katana.png",
+                "champName": "seref",
                 "champPv": 16,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-piece-king-and-katana.png"
+                "champImg": "img/champImg/seref.png"
             },
             "champId16": {
-                "champName": "one-piece-monkey-d-garp-and-cup.png",
+                "champName": "servan",
                 "champPv": 19,
                 "champAttack": 4,
-                "champImg": "img/champImg/one-piece-monkey-d-garp-and-cup.png"
+                "champImg": "img/champImg/servan.png"
             },
             "champId17": {
-                "champName": "one-Piece-Monkey-D-Luffy-Flag.png",
+                "champName": "will",
                 "champPv": 20,
                 "champAttack": 3,
-                "champImg": "img/champImg/one-Piece-Monkey-D-Luffy-Flag.png"
-            },
-            "champId18": {
-                "champName": "one-piece-nami-and-sorcery-clima-tact.png",
-                "champPv": 17,
-                "champAttack": 3,
-                "champImg": "img/champImg/one-piece-nami-and-sorcery-clima-tact.png"
-            },
-            "champId19": {
-                "champName": "one-piece-nico-olvia.png",
-                "champPv": 20,
-                "champAttack": 4,
-                "champImg": "img/champImg/one-piece-nico-olvia.png"
-            },
-            "champId20": {
-                "champName": "one-piece-nico-robin-and-hana-hana-no-mi.png",
-                "champPv": 15,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-nico-robin-and-hana-hana-no-mi.png"
-            },
-            "champId21": {
-                "champName": "one-piece-oden-and-ame-no-habakiri.png",
-                "champPv": 16,
-                "champAttack": 4,
-                "champImg": "img/champImg/one-piece-oden-and-ame-no-habakiri.png"
-            },
-            "champId22": {
-                "champName": "one-piece-perona-and-umbrella.png",
-                "champPv": 17,
-                "champAttack": 4,
-                "champImg": "img/champImg/one-piece-perona-and-umbrella.png"
-            },
-            "champId23": {
-                "champName": "one-piece-portgas-d-ace-and-knife.png",
-                "champPv": 16,
-                "champAttack": 3,
-                "champImg": "img/champImg/one-piece-portgas-d-ace-and-knife.png"
-            },
-            "champId24": {
-                "champName": "one-piece-roger-and-ace-sword.png",
-                "champPv": 17,
-                "champAttack": 3,
-                "champImg": "img/champImg/one-piece-roger-and-ace-sword.png"
-            },
-            "champId25": {
-                "champName": "one-piece-sabo.png",
-                "champPv": 20,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-sabo.png"
-            },
-            "champId26": {
-                "champName": "one-piece-sanji-and-fire-leg.png",
-                "champPv": 19,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-sanji-and-fire-leg.png"
-            },
-            "champId27": {
-                "champName": "one-piece-sham.png",
-                "champPv": 17,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-sham.png"
-            },
-            "champId28": {
-                "champName": "one-piece-shanks-and-sword.png",
-                "champPv": 15,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-shanks-and-sword.png"
-            },
-            "champId29": {
-                "champName": "one-piece-trafalgar-and-sword.png",
-                "champPv": 18,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-trafalgar-and-sword.png"
-            },
-            "champId30": {
-                "champName": "one-piece-usopp-and-slingshot.png",
-                "champPv": 17,
-                "champAttack": 4,
-                "champImg": "img/champImg/one-piece-usopp-and-slingshot.png"
-            },
-            "champId31": {
-                "champName": "one-piece-uta.png",
-                "champPv": 16,
-                "champAttack": 3,
-                "champImg": "img/champImg/one-piece-uta.png"
-            },
-            "champId32": {
-                "champName": "one-piece-vinsmoke-niji.png",
-                "champPv": 18,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-vinsmoke-niji.png"
-            },
-            "champId33": {
-                "champName": "one-piece-yamato-and-kanabo.png",
-                "champPv": 18,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-yamato-and-kanabo.png"
-            },
-            "champId34": {
-                "champName": "one-piece-zoro-and-sword.png",
-                "champPv": 18,
-                "champAttack": 5,
-                "champImg": "img/champImg/one-piece-zoro-and-sword.png"
-            }   
+                "champImg": "img/champImg/will.png"
+            } 
     },
     "asset": {
         "gameLogo": "img/gameLogo.png",

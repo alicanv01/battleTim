@@ -1,7 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
 }
 
 .displayNone{
@@ -20,10 +24,9 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    border: #fff solid 5px;
 }
-button{
-    padding: 1rem;
-}
+
 
 
 #champSelectPage{
@@ -41,18 +44,27 @@ button{
     flex-wrap: wrap;
 }
 .champSelectCard{
-    background-color: rgba(245, 245, 220, 0);  
+
     
+    padding: 2px;
+    border-radius: 500px;
+    border: solid #0066cc00
 }
 
 .champSelectCard:hover{
     box-shadow: 0px 0px 10px 4px #000000;
+    transition : 374ms;
+    transform : scale(110%);
+    padding: 2px;
+    border-radius: 500px;
+    border: solid #0066CC
 }
 
 .champSelectJ1{    
     border: solid red 5px;
 }
 .champSelectJ2{
+    
     border: solid blue 5px;
 }
 
@@ -62,6 +74,41 @@ button{
 }
 
 .inputchampSelectCard:checked + label
-{
-  background: #000;
+{    box-shadow: 0px 0px 10px 4px #000000;
+    transition : 374ms;
+    padding: 2px;
+    border-radius: 500px;
+    border: solid #8ab0d6;
+}
+
+
+
+
+button{
+
+font-family: Roboto, sans-serif;
+
+font-size: 14px;
+color: #fff;
+background: #0066cc;
+padding: 5px 20px;
+border: 2px solid #0066cc;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 300ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+button:hover{
+
+transition : 300ms;
+padding: 10px 20px;
+transform : translateY(-0px);
+background: white;
+color: #0066cc;
+border: solid 2px #0066cc;
 }
