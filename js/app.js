@@ -247,22 +247,30 @@ function attack(champBattleJ1, champBattleJ2) {
     const player2Pv = document.getElementById("player2Pv");
     const player1Attack=document.getElementById("player1Attack")
     const player2Attack=document.getElementById("player2Attack")
+    const player1=document.getElementById("player1")
+    const player2=document.getElementById("player2")
     function performAttackJ1() {
         ingameJ1Attack = creatRadomNbr(ingameJ1Attack, 3);
         ingameJ2Pv -= ingameJ1Attack;
         console.log("Attaque de J1   J1Attack  " + ingameJ1Attack + "   J2Pv  " + ingameJ2Pv);
         player1Attack.textContent = `player1 Attack = ${ingameJ1Attack}`;
         player2Pv.textContent = `player2 Pv = ${ingameJ2Pv}`;
+        player2.classList.remove("imageShake")
+        player1.classList.add("imageShake")
+        
+
         if (ingameJ2Pv <= 0) {
             console.log("J1 a gagné !");
            creatBattlePage(playerName = "J1",playerChampImg = ingameJ2Img)
-
+           player1.classList.add("win")
             return "J1";
         }
         setTimeout(performAttackJ2, 2000); // Déclenche l'attaque du joueur 2 après 1 seconde
     }
     
     function performAttackJ2() {
+        player1.classList.remove("imageShake")
+        player2.classList.add("imageShake")
         ingameJ2Attack = creatRadomNbr(ingameJ2Attack, 3);
         ingameJ1Pv -= ingameJ2Attack;
         console.log("Attaque de J2   J2Attack  " + ingameJ2Attack + "   J1Pv  " + ingameJ1Pv);
