@@ -192,7 +192,9 @@ function getChampion(player) {
             // Code spécifique au joueur 2
             selectedValueJ2 = selectedValue;
             startGameBattle(); 
-            battlea(selectedValueJ1,selectedValueJ2)// Démarre la bataille lorsque les deux joueurs ont sélectionné leur champion
+            createBattlePage(selectedValueJ1,selectedValueJ2);
+            attack(selectedValueJ1,selectedValueJ2);// Démarre la bataille lorsque les deux joueurs ont sélectionné leur champion
+            
         }
 
     } else {
@@ -210,25 +212,64 @@ champSelectBtnJ2.addEventListener("click", function() {
     
 });
 
+function attack(champBattleJ1, champBattleJ2) {
+    const champBattleJ1Attack = JSON.parse(champBattleJ1);
+    const champBattleJ2Attack = JSON.parse(champBattleJ2);
+    let ingameJ1Pv = champBattleJ1Attack.champPv;
+    let ingameJ2Pv = champBattleJ2Attack.champPv;
+    let ingameJ1Attack = champBattleJ1Attack.champAttack;
+    let ingameJ2Attack = champBattleJ2Attack.champAttack;
+    const player1Pv = document.getElementById("player1Pv");
+    const player2Pv = document.getElementById("player2Pv");
 
+    function performAttackJ1() {
+        ingameJ1Attack = creatRadomNbr(ingameJ1Attack, 3);
+        ingameJ2Pv -= ingameJ1Attack;
+        console.log("Attaque de J1   J1Attack  " + ingameJ1Attack + "   J2Pv  " + ingameJ2Pv);
+        player2Pv.textContent = `player2 Pv = ${ingameJ2Pv}`;
+        if (ingameJ2Pv <= 0) {
+            console.log("J1 a gagné !");
+            return "J1";
+        }
+        setTimeout(performAttackJ2, 2000); // Déclenche l'attaque du joueur 2 après 1 seconde
+    }
 
-function battlea(champBattleJ1,champBattleJ2){
-    console.log(champBattleJ1)
-    console.log(champBattleJ2)
-    //const player1=documeny.getElementById("player1");
-    //const player2=documeny.getElementById("player2");
-    var champBattleJ1Obj = JSON.parse(champBattleJ1);
-   console.log(champBattleJ1Obj.champName)
+    function performAttackJ2() {
+        ingameJ2Attack = creatRadomNbr(ingameJ2Attack, 3);
+        ingameJ1Pv -= ingameJ2Attack;
+        console.log("Attaque de J2   J2Attack  " + ingameJ2Attack + "   J1Pv  " + ingameJ1Pv);
+        player1Pv.textContent = `player1 Pv = ${ingameJ1Pv}`;
+        if (ingameJ1Pv <= 0) {
+            console.log("J2 a gagné !");
+            return "J2";
+        }
+        setTimeout(performAttackJ1, 2000); // Déclenche l'attaque du joueur 1 après 1 seconde
+    }
 
+    // Lance la première attaque du joueur 1
+    setTimeout(performAttackJ1, 2000);
+}
+// <   >
+function createBattlePage(champBattleJ1, champBattleJ2) {
+    const champBattleJ1Obj = JSON.parse(champBattleJ1);
+    const champBattleJ2Obj = JSON.parse(champBattleJ2);
+
+    // Affichage des images et des noms des joueurs
+    addBattlePage(champBattleJ1Obj, "player1", "champImgJ1", "player1Pv", "player1Name");
+    addBattlePage(champBattleJ2Obj, "player2", "champImgJ2", "player2Pv", "player2Name");
 }
 
-
-
-
-
-
-
-
+function addBattlePage(champObj, playerId, imgId, pvId, nameId) {
+    const player = document.getElementById(playerId);
+    const champImg = document.createElement("img");
+    champImg.src = champObj.champImg;
+    champImg.alt = champObj.champName;
+    champImg.className = "champImgBattlePage";
+    champImg.id = imgId;
+    player.appendChild(champImg);
+    document.getElementById(pvId).innerHTML = `${playerId} Pv = ${champObj.champPv}`;
+    document.getElementById(nameId).innerHTML = champObj.champName;
+}
 
 
 
