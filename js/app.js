@@ -212,6 +212,28 @@ champSelectBtnJ2.addEventListener("click", function() {
     
 });
 
+
+function creatBattlePage(playerName,playerChamp){
+    homePage.setAttribute("class", "displayNone");
+    champSelectPage.setAttribute("class", "displayNone");
+    battlePage.setAttribute("class", "displayNone");
+    endBattlePage.removeAttribute("class");
+    const winChampImg=document.getElementById("winChampImg")
+    const winChampName=document.getElementById("winChampName")
+    winChampName.textContent = `${playerName} a gagner`;
+
+    creatImg(
+        srcImg= playerChampImg,
+         altImg= playerName,
+          classImg= "player",
+           idImg= playerName,
+            parentImg= winChampImg
+            )
+
+}
+
+
+
 function attack(champBattleJ1, champBattleJ2) {
     const champBattleJ1Attack = JSON.parse(champBattleJ1);
     const champBattleJ2Attack = JSON.parse(champBattleJ2);
@@ -219,28 +241,36 @@ function attack(champBattleJ1, champBattleJ2) {
     let ingameJ2Pv = champBattleJ2Attack.champPv;
     let ingameJ1Attack = champBattleJ1Attack.champAttack;
     let ingameJ2Attack = champBattleJ2Attack.champAttack;
+    const ingameJ1Img= champBattleJ1Attack.champImg
+    const ingameJ2Img= champBattleJ2Attack.champImg
     const player1Pv = document.getElementById("player1Pv");
     const player2Pv = document.getElementById("player2Pv");
-
+    const player1Attack=document.getElementById("player1Attack")
+    const player2Attack=document.getElementById("player2Attack")
     function performAttackJ1() {
         ingameJ1Attack = creatRadomNbr(ingameJ1Attack, 3);
         ingameJ2Pv -= ingameJ1Attack;
         console.log("Attaque de J1   J1Attack  " + ingameJ1Attack + "   J2Pv  " + ingameJ2Pv);
+        player1Attack.textContent = `player1 Attack = ${ingameJ1Attack}`;
         player2Pv.textContent = `player2 Pv = ${ingameJ2Pv}`;
         if (ingameJ2Pv <= 0) {
             console.log("J1 a gagné !");
+           creatBattlePage(playerName = "J1",playerChampImg = ingameJ2Img)
+
             return "J1";
         }
         setTimeout(performAttackJ2, 2000); // Déclenche l'attaque du joueur 2 après 1 seconde
     }
-
+    
     function performAttackJ2() {
         ingameJ2Attack = creatRadomNbr(ingameJ2Attack, 3);
         ingameJ1Pv -= ingameJ2Attack;
         console.log("Attaque de J2   J2Attack  " + ingameJ2Attack + "   J1Pv  " + ingameJ1Pv);
+        player2Attack.textContent = `player2 Attack = ${ingameJ2Attack}`;
         player1Pv.textContent = `player1 Pv = ${ingameJ1Pv}`;
         if (ingameJ1Pv <= 0) {
             console.log("J2 a gagné !");
+            creatBattlePage(playerName = "J2",playerChampImg = ingameJ2Img)
             return "J2";
         }
         setTimeout(performAttackJ1, 2000); // Déclenche l'attaque du joueur 1 après 1 seconde
@@ -269,6 +299,7 @@ function addBattlePage(champObj, playerId, imgId, pvId, nameId) {
     player.appendChild(champImg);
     document.getElementById(pvId).innerHTML = `${playerId} Pv = ${champObj.champPv}`;
     document.getElementById(nameId).innerHTML = champObj.champName;
+    player.classList.add("class","rvzevvz","evzevze")
 }
 
 
