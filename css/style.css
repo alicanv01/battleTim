@@ -26,6 +26,24 @@ body{
     justify-content: center;
     border: #fff solid 5px;
 }
+#battlePage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: #fff solid 5px;
+}
+#endBattlePage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: #fff solid 5px;
+}
 
 
 
@@ -36,9 +54,10 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    gap: 50px;
 }
 #champList{
-    width: 1000px;
+    width: 400px;
     display: flex;
     gap:20px;
     flex-wrap: wrap;
@@ -59,7 +78,16 @@ body{
     border-radius: 500px;
     border: solid #0066CC
 }
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .tremble{
 
+  }
 .champSelectJ1{    
     border: solid red 5px;
 }
@@ -80,7 +108,9 @@ body{
     border-radius: 500px;
     border: solid #8ab0d6;
 }
-
+img{
+    
+}
 
 
 
