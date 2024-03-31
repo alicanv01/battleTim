@@ -134,6 +134,31 @@ body{
     }
   }
 
+  .imageShakeAttack {
+    animation: shakeAttack 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shakeAttack {
+    10%, 90% {
+      transform: translate3d(0, -10px, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(0, -10px, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
 button{
 
 font-family: Roboto, sans-serif;
