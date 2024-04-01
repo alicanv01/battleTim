@@ -255,8 +255,10 @@ function attack(champBattleJ1, champBattleJ2) {
         console.log("Attaque de J1   J1Attack  " + ingameJ1Attack + "   J2Pv  " + ingameJ2Pv);
         player1Attack.textContent = `player1 Attack = ${ingameJ1Attack}`;
         player2Pv.textContent = `player2 Pv = ${ingameJ2Pv}`;
-        player2.classList.remove("imageShakeAttack")
-        player1.classList.add("imageShakeAttack")
+        player2.classList.remove("imageShakeAttackJ2")
+        player1.classList.add("imageShakeAttackJ1")
+        player1.classList.remove("imageShake")
+        player2.classList.add("imageShake")
         
 
         if (ingameJ2Pv <= 0) {
@@ -269,8 +271,10 @@ function attack(champBattleJ1, champBattleJ2) {
     }
     
     function performAttackJ2() {
-        player1.classList.remove("imageShakeAttack")
-        player2.classList.add("imageShakeAttack")
+        player1.classList.remove("imageShakeAttackJ1")
+        player2.classList.add("imageShakeAttackJ2")
+        player2.classList.remove("imageShake")
+        player1.classList.add("imageShake")
         ingameJ2Attack = creatRadomNbr(ingameJ2Attack, 3);
         ingameJ1Pv -= ingameJ2Attack;
         console.log("Attaque de J2   J2Attack  " + ingameJ2Attack + "   J1Pv  " + ingameJ1Pv);
