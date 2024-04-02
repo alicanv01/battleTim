@@ -251,13 +251,23 @@ function attack(champBattleJ1, champBattleJ2) {
     const player2=document.getElementById("player2")
     function performAttackJ1() {
         ingameJ1Attack = creatRadomNbr(ingameJ1Attack, 3);
+player2Pv.classList.add("atteckAsset")
+
         ingameJ2Pv -= ingameJ1Attack;
+
         console.log("Attaque de J1   J1Attack  " + ingameJ1Attack + "   J2Pv  " + ingameJ2Pv);
-        player1Attack.textContent = `player1 Attack = ${ingameJ1Attack}`;
-        player2Pv.textContent = `player2 Pv = ${ingameJ2Pv}`;
+      
+        player2Pv.textContent = `- ${ingameJ1Attack}`;
+        
+        
+        
+
+        ingameJ1Attack=champBattleJ1Attack.champAttack
+
         player2.classList.remove("imageShakeAttackJ2")
         player1.classList.add("imageShakeAttackJ1")
         player1.classList.remove("imageShake")
+        player1Pv.classList.remove("atteckAsset")
         player2.classList.add("imageShake")
         
 
@@ -274,12 +284,22 @@ function attack(champBattleJ1, champBattleJ2) {
         player1.classList.remove("imageShakeAttackJ1")
         player2.classList.add("imageShakeAttackJ2")
         player2.classList.remove("imageShake")
+        player2Pv.classList.remove("atteckAsset")
         player1.classList.add("imageShake")
+        
         ingameJ2Attack = creatRadomNbr(ingameJ2Attack, 3);
+        player1Pv.classList.add("atteckAsset")
+        
         ingameJ1Pv -= ingameJ2Attack;
+        
+        
         console.log("Attaque de J2   J2Attack  " + ingameJ2Attack + "   J1Pv  " + ingameJ1Pv);
-        player2Attack.textContent = `player2 Attack = ${ingameJ2Attack}`;
-        player1Pv.textContent = `player1 Pv = ${ingameJ1Pv}`;
+      
+        player1Pv.textContent = ` - ${ingameJ2Attack}`;
+        
+        
+        ingameJ2Attack = champBattleJ2Attack.champAttack;
+        
         if (ingameJ1Pv <= 0) {
             console.log("J2 a gagné !");
             creatBattlePage(playerName = "J2",playerChampImg = ingameJ2Img)
