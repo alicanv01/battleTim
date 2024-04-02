@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
-
+@font-face {
+  font-family: 'Act_Of_Rejection';
+  src: url('fonts/Act_Of_Rejection.ttf') format('truetype');
+  /* Ajoutez des règles supplémentaires pour spécifier les différents formats de police si nécessaire */
+}
 *{
     padding: 0;
     margin: 0;
@@ -13,8 +17,8 @@
 }
 
 body{
-    background: #322626;
-    color: aliceblue;
+    background: #0c1e93;
+    color: aliceblue; overflow: hidden;
 }
 
 #homePage{
@@ -23,17 +27,18 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    border: #fff solid 5px;
+    justify-content: center; overflow: hidden;
+ 
 }
 #battlePage{
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    gap: 300px;
     justify-content: center;
-    border: #fff solid 5px;
+        overflow: hidden;
+
 }
 #endBattlePage{
     height: 100vh;
@@ -41,8 +46,8 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    border: #fff solid 5px;
+    justify-content: center; overflow: hidden;
+
 }
 
 .playerPV{
@@ -73,30 +78,17 @@ body{
 }
 
 .champSelectCard:hover{
-    box-shadow: 0px 0px 10px 4px #000000;
+ 
     transition : 374ms;
     transform : scale(110%);
     padding: 2px;
-    border-radius: 500px;
-    border: solid #0066CC
-}
-@keyframes tilt-shaking {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-  }
-  .tremble{
 
-  }
-.champSelectJ1{    
-    border: solid red 5px;
 }
-.champSelectJ2{
-    
-    border: solid blue 5px;
+#champImgJ1{
+  transform: scale(-1, 1);
 }
+
+
 
 
 .inputchampSelectCard{
@@ -104,17 +96,70 @@ body{
 }
 
 .inputchampSelectCard:checked + label
-{    box-shadow: 0px 0px 10px 4px #000000;
+{ 
     transition : 374ms;
     padding: 2px;
-    border-radius: 500px;
-    border: solid #8ab0d6;
+    animation: shakea 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
+
+
+
+
+@keyframes shakea {
+    
+
+100%{
+  transform: scale(130%);
+}
+
+  0%, 90% {
+    transform: translate3d(-1px, 0, 0) scale(130%);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0) scale(130%);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0) scale(130%);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0) scale(130%);
+    ;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#tryagain{
+  border: none;
+  background: none;
+}
+
+
+
+
+
+
 
 .imageShake {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
-    animation-delay: 900ms;
+    animation-delay: 600ms;
     backface-visibility: hidden;
     perspective: 1000px;
   }
@@ -124,7 +169,7 @@ body{
 
 
 
-    10%, 90% {
+    0%, 90% {
       transform: translate3d(-1px, 0, 0);
     }
     
@@ -150,19 +195,32 @@ body{
   
   @keyframes shakeAttack2 {
     10%{
-      transform: translate3d(0, -10px, 0);
+      
+      transform: translate3d(-10px, 0, 0),
+      rotateZ(0deg);
     }
-    
-    80% {
-      transform: translate3d(0, 50px, 0);
+    20% {
+      
+      transform: translate3d( 60px, 0, 0)
+      rotateZ(0deg);
     }
-  
-    90%  {
-      transform: translate3d(0, -50px, 0);
+    60% {
+      
+      transform: translate3d( 60px, 0, 0)
+      rotateZ(-40deg);
     }
-  
+    70%  {
+      transform: translate3d( -280px, 0, 0)
+      rotateZ(-40deg);
+    }
+
+    80%  {
+      
+      transform: translate3d( -300px, 0, 0)
+      rotateZ(0deg);
+    }
     100% {
-      transform: translate3d(0, 0, 0);
+      transform: translate3d( 0, 0, 0);
     }
   }
 
@@ -173,30 +231,42 @@ body{
     perspective: 1000px;
   }
   
+
   @keyframes shakeAttack1 {
     10%{
-      transform: translate3d(0, 10px, 0);
+      
+      transform: translate3d(10px, 0, 0),
+      rotateZ(0deg);
     }
-    
-    80% {
-      transform: translate3d(0, -50px, 0);
+    20% {
+      
+      transform: translate3d( -60px, 0, 0)
+      rotateZ(0deg);
     }
-  
-    90%  {
-      transform: translate3d(0, 50px, 0);
+    60% {
+      
+      transform: translate3d( -60px, 0, 0)
+      rotateZ(40deg);
     }
-  
+    70%  {
+      transform: translate3d( 280px, 0, 0)
+      rotateZ(40deg);
+    }
+
+    80%  {
+      
+      transform: translate3d( 300px, 0, 0)
+      rotateZ(0deg);
+    }
     100% {
-      transform: translate3d(0, 0, 0);
+      transform: translate3d( 0, 0, 0);
     }
   }
 
 
-
-
 button{
 
-font-family: Roboto, sans-serif;
+font-family: Act_Of_Rejection, sans-serif;
 
 font-size: 14px;
 color: #fff;
@@ -230,6 +300,7 @@ border: solid 2px #0066cc;
 .atteckAsset{
  
 	animation: atteckAssetAnim 1s both; animation-delay: 800ms;
+  font-family: 'Act_Of_Rejection',sans-serif;
 }
 
 @keyframes atteckAssetAnim {
@@ -242,7 +313,6 @@ border: solid 2px #0066cc;
   
 20% {
     opacity: 100%;
-    transform: translate3d(0, 0, 0);
   }
 
   90% {
@@ -254,7 +324,6 @@ border: solid 2px #0066cc;
   100% {
     opacity: 0%;
     transform: translate3d(0, 10px, 0);
-    scale(100%);
-
+    
   }
 }

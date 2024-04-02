@@ -2,107 +2,47 @@
     "champs": {
         
             "champId1": {
-                "champName": "Anik",
+                "champName": "lee",
                 "champPv": 15,
                 "champAttack": 4,
-                "champImg": "img/champImg/anik.png"
+                "champImg": "img/champImg/lee.png"
             },
             "champId2": {
-                "champName": "aylin",
+                "champName": "nemo",
                 "champPv": 20,
                 "champAttack": 3,
-                "champImg": "img/champImg/aylin.png"
+                "champImg": "img/champImg/nemo.png"
             },
             "champId3": {
-                "champName": "ayse",
+                "champName": "omer",
                 "champPv": 16,
                 "champAttack": 4,
-                "champImg": "img/champImg/ayse.png"
+                "champImg": "img/champImg/omer.png"
             },
             "champId4": {
-                "champName": "bahar",
+                "champName": "pikachu",
                 "champPv": 20,
                 "champAttack": 5,
-                "champImg": "img/champImg/bahar.png"
+                "champImg": "img/champImg/pikachu.png"
             },
             "champId5": {
-                "champName": "ciha",
+                "champName": "ping",
                 "champPv": 18,
                 "champAttack": 4,
-                "champImg": "img/champImg/ciha.png"
+                "champImg": "img/champImg/ping.png"
             },
             "champId6": {
-                "champName": "enzo",
+                "champName": "tenchinhan",
                 "champPv": 17,
                 "champAttack": 4,
-                "champImg": "img/champImg/enzo.png"
+                "champImg": "img/champImg/tenchinhan.png"
             },
             "champId7": {
-                "champName": "fatma",
+                "champName": "toad",
                 "champPv": 15,
                 "champAttack": 3,
-                "champImg": "img/champImg/fatma.png"
-            },
-            "champId8": {
-                "champName": "hasan",
-                "champPv": 18,
-                "champAttack": 3,
-                "champImg": "img/champImg/hasan.png"
-            },
-            "champId9": {
-                "champName": "hulya",
-                "champPv": 20,
-                "champAttack": 3,
-                "champImg": "img/champImg/hulya.png"
-            },
-            "champId10": {
-                "champName": "isia",
-                "champPv": 19,
-                "champAttack": 5,
-                "champImg": "img/champImg/isia.png"
-            },
-            "champId11": {
-                "champName": "iso",
-                "champPv": 18,
-                "champAttack": 3,
-                "champImg": "img/champImg/iso.png"
-            },
-            "champId12": {
-                "champName": "lea",
-                "champPv": 17,
-                "champAttack": 3,
-                "champImg": "img/champImg/lea.png"
-            },
-            "champId13": {
-                "champName": "melanie",
-                "champPv": 20,
-                "champAttack": 4,
-                "champImg": "img/champImg/melanie.png"
-            },
-            "champId14": {
-                "champName": "miray",
-                "champPv": 17,
-                "champAttack": 3,
-                "champImg": "img/champImg/miray.png"
-            },
-            "champId15": {
-                "champName": "seref",
-                "champPv": 16,
-                "champAttack": 3,
-                "champImg": "img/champImg/seref.png"
-            },
-            "champId16": {
-                "champName": "servan",
-                "champPv": 19,
-                "champAttack": 4,
-                "champImg": "img/champImg/servan.png"
-            },
-            "champId17": {
-                "champName": "will",
-                "champPv": 20,
-                "champAttack": 3,
-                "champImg": "img/champImg/will.png"
-            } 
+                "champImg": "img/champImg/toad.png"
+            }
     },
     "asset": {
         "gameLogo": "img/gameLogo.png",

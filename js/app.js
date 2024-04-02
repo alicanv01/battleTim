@@ -42,7 +42,7 @@ const endBattlePage = document.getElementById("endBattlePage");
 
 function start() {
     creatImg(
-        srcImg = "img/gameLogo.png",
+        srcImg = "img/go.gif",
         altImg = "gameLogo",
         classImg = "gameLogo",
         idImg = "gameLogoHomePage",
@@ -330,7 +330,7 @@ function addBattlePage(champObj, playerId, imgId, pvId, nameId) {
     champImg.id = imgId;
     player.appendChild(champImg);
     document.getElementById(pvId).innerHTML = `${playerId} Pv = ${champObj.champPv}`;
-    document.getElementById(nameId).innerHTML = champObj.champName;
+
     player.classList.add("class","rvzevvz","evzevze")
 }
 
@@ -352,7 +352,6 @@ function selectItem(items, itemClass) {
 
 
 
-
 function creatRadomNbr(max, min) {
     let radomNbr = Math.floor(Math.random() * (max - min + 1)) + min;
     return radomNbr
@@ -360,3 +359,6 @@ function creatRadomNbr(max, min) {
 
 
 
+function actualiserPage() {
+    location.reload();
+}
