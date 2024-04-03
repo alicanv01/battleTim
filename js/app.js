@@ -101,6 +101,16 @@ function creatChampSelectCard(champCardId, champCardClass, champCardName, value)
         champSelectCard.setAttribute(attribute.name, attribute.value);
     });
     const labelSelectCard = document.createElement('label');
+    const vignetteJ1 = document.createElement('div');
+
+    var vignetteJ1Attributes = [
+        
+        { name: 'class', value: `vignette` } 
+    ];
+
+    vignetteJ1Attributes.forEach(function (attribute) {
+        vignetteJ1.setAttribute(attribute.name, attribute.value);
+    });
 
     var labelSelectCardAttributes = [
         { name: 'id', value: `label${champCardId}` },
@@ -111,8 +121,10 @@ function creatChampSelectCard(champCardId, champCardClass, champCardName, value)
     labelSelectCardAttributes.forEach(function (attribute) {
         labelSelectCard.setAttribute(attribute.name, attribute.value);
     });
+    vignetteJ1.textContent=" V "
     champList.appendChild(champSelectCard);
     champList.appendChild(labelSelectCard);
+    labelSelectCard.appendChild(vignetteJ1);
 
 }
 
@@ -188,6 +200,7 @@ function getChampion(player) {
         if (player === 1) {
             // Code spécifique au joueur 1
             selectedValueJ1 = selectedValue;
+
         } else {
             // Code spécifique au joueur 2
             selectedValueJ2 = selectedValue;
@@ -199,6 +212,7 @@ function getChampion(player) {
 
     } else {
         console.log('No option selected for Player ' + player);
+
     }
     
 }
