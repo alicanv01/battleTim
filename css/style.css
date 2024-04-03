@@ -361,29 +361,13 @@ border: solid 2px #0066cc;
   }
 }
 #winChampImg img{
-
+transition: 100ms;  
 transform:  scale(200%);
 	animation: win 1s both; animation-delay: 800ms;
 
 }
 
 @keyframes win {
-  10%{
-    opacity: 0%;
-   
-    transform: translate3d(0, 10px, 0);
-  }
-  
-  
-20% {
-    opacity: 100%;
-  }
-
-  90% {
-    opacity: 100%;
-    transform: translate3d(0, 0, 0)
-    scale(200%);
-  }
 
 
 }
