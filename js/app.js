@@ -220,7 +220,7 @@ function creatBattlePage(playerName,playerChamp){
     endBattlePage.removeAttribute("class");
     const winChampImg=document.getElementById("winChampImg")
     const winChampName=document.getElementById("winChampName")
-    winChampName.textContent = `${playerName} a gagner`;
+    
 
     creatImg(
         srcImg= playerChampImg,
