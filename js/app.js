@@ -275,15 +275,16 @@ function attack(champBattleJ1, champBattleJ2) {
     function performAttackJ1() {
         ingameJ1Attack = creatRadomNbr(ingameJ1Attack, 3);
     player2Pv.classList.add("atteckAsset")
-
+   
         ingameJ2Pv -= ingameJ1Attack;
 
         console.log("Attaque de J1   J1Attack  " + ingameJ1Attack + "   J2Pv  " + ingameJ2Pv);
       
         player2Pv.textContent = `- ${ingameJ1Attack}`;
         
-        barrePvFront(player1Pv)
         
+        playerPvBarre(ingameJ2Pv,champBattleJ2Attack.champPv,2)
+      
         
 
         ingameJ1Attack=champBattleJ1Attack.champAttack
@@ -316,11 +317,11 @@ function attack(champBattleJ1, champBattleJ2) {
         
         ingameJ1Pv -= ingameJ2Attack;
         
-        
+        playerPvBarre(ingameJ1Pv,champBattleJ1Attack.champPv,1)
         console.log("Attaque de J2   J2Attack  " + ingameJ2Attack + "   J1Pv  " + ingameJ1Pv);
       
         player1Pv.textContent = ` - ${ingameJ2Attack}`;
-        barrePvFront(player2Pv)
+       
         
         ingameJ2Attack = champBattleJ2Attack.champAttack;
         
@@ -381,6 +382,40 @@ function creatRadomNbr(max, min) {
     return radomNbr
 }
 
+function pourcentage(nbra,nbrb){
+    let nbrPour = Math.round(nbra * 100/nbrb)
+    if (nbrPour <= 0) {
+        nbrPour = 0
+    }
+    return nbrPour
+    
+}
+
+
+function playerPvBarre(nbrPv, nbrAllPv,d) {
+
+    const playerPvBarre=document.getElementById(`player${d}PvBarre`)
+    while (playerPvBarre.firstChild) {
+        // Supprimer le premier enfant de l'élément parent
+        playerPvBarre.removeChild(playerPvBarre.firstChild);
+    }
+
+
+    let n =pourcentage(nbrPv, nbrAllPv)
+    console.log(n+" "+ d );
+    for (let index = 0; index < n; index++) {
+    const pvPour = document.createElement('span');
+    var pvPourAttributes = [
+        { name: 'class', value: `pvPour${d}` }
+    ];
+
+    pvPourAttributes.forEach(function (attribute) {
+        pvPour.setAttribute(attribute.name, attribute.value);
+    });
+
+    playerPvBarre.appendChild(pvPour);  
+    }
+}
 
 
 function actualiserPage() {
@@ -389,6 +424,15 @@ function actualiserPage() {
 
 
 
-function barrePvFront(test) {
-    
+var audio = document.getElementById("myAudio");
+var toggleBtn = document.getElementById("toggleBtn");
+
+function toggleSong() {
+  if (audio.paused) {
+    audio.play();
+    toggleBtn.textContent = "Couper";
+  } else {
+    audio.pause();
+    toggleBtn.textContent = "Reprendre";
+  }
 }

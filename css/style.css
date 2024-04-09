@@ -407,17 +407,25 @@ animation: win 1s both; animation-delay: 800ms;
 }
 
 .playerPvBarre{
-  width: 10%;
-  height: 10px;
-  background: #e4dbdb;
-}
-#playerPv1Barre{
+  display: flex;
   width: 100%;
-  height: 10px;
-  background: #e4dbdb;
+  height: 20px;
+  border: solid white 3px;
+  border-radius: 50px;
+  margin: 30px 0 ;
+  padding: 2px;
 }
-#playerPv2Barre{
-  width: 50%;
-  height: 10px;
-  background: #e4dbdb;
+.pvPour1{
+  display: flex;
+  width: 1%;
+  border-radius: 50px;
+  background: rgb(9, 188, 93);
+}
+.pvPour2{
+  display: flex;
+
+  width: 1%;
+  border-radius: 50px;
+  background: #ff0000;
+  
 }
