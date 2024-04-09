@@ -21,6 +21,7 @@ body{
     color: aliceblue; overflow: hidden;
 }
 
+
 #homePage{
     height: 100vh;
     width: 100vw;
@@ -93,6 +94,7 @@ body{
 #champImgJ1{
   transform: scale(-1, 1);
 }
+
 #champSelectBtnJ2{
   background-color: red;
 }
@@ -128,25 +130,27 @@ body{
 display: flex;
 z-index: 1;
 transition: 500ms;
-
-
 }
 
 
+#champSelectBtnJ1{
+    background-color: rgb(9, 188, 93); 
+
+}
 
 .J1bg{
-  background-color: rgb(9, 188, 93);
+  background-color: rgb(9, 188, 93)! important; 
 }
 .J2bg{
-  background-color: red;
+  background-color: red ! important;
 }
 
 
 
 .vignette{
   text-align: center;
-  align-items: center;
-  justify-content: center;
+
+
   display: none;
   position: absolute;
   width: 50px;
@@ -402,7 +406,18 @@ animation: win 1s both; animation-delay: 800ms;
 
 }
 
-@keyframes win {
-
-
+.playerPvBarre{
+  width: 10%;
+  height: 10px;
+  background: #e4dbdb;
+}
+#playerPv1Barre{
+  width: 100%;
+  height: 10px;
+  background: #e4dbdb;
+}
+#playerPv2Barre{
+  width: 50%;
+  height: 10px;
+  background: #e4dbdb;
 }

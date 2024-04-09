@@ -2,10 +2,10 @@
     "champs": {
         
             "champId1": {
-                "champName": "lee",
+                "champName": "a",
                 "champPv": 15,
                 "champAttack": 4,
-                "champImg": "img/champImg/lee.png"
+                "champImg": "img/champImg/a.png"
             },
             "champId2": {
                 "champName": "nemo",
@@ -50,6 +50,7 @@
         "iconHome": "home",
         "iconSong": "song",
         "iconWin": "Win",
+        "iconSelect": "Winqs",
         "iconRestart": "iconRestart"
     }
 }

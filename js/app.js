@@ -103,8 +103,8 @@ function creatChampSelectCard(champCardId, champCardClass, champCardName, value)
     const labelSelectCard = document.createElement('label');
     const vignetteJ1 = document.createElement('div');
 
+
     var vignetteJ1Attributes = [
-        
         { name: 'class', value: `vignette` } 
     ];
 
@@ -121,7 +121,7 @@ function creatChampSelectCard(champCardId, champCardClass, champCardName, value)
     labelSelectCardAttributes.forEach(function (attribute) {
         labelSelectCard.setAttribute(attribute.name, attribute.value);
     });
-    vignetteJ1.textContent=" V "
+    vignetteJ1.textContent="J1"
     champList.appendChild(champSelectCard);
     champList.appendChild(labelSelectCard);
     labelSelectCard.appendChild(vignetteJ1);
@@ -151,9 +151,9 @@ function champSelect() {
                 }
                 `
         );
-
+        
         const labelSelectCard = document.getElementById(`label${champ.champName}`);
-
+       
         creatImg(
             srcImg = champ.champImg,
             altImg = champ.champName,
@@ -176,19 +176,28 @@ const champSelectBtnJ2 = document.getElementById("champSelectBtnJ2");
 
 champSelectBtnJ2.classList.add("displayNone");
 
+var radios = document.getElementsByName('champCardJ1');
 function getChampion(player) {
     // Obtenir tous les éléments radio avec le nom "champCardJ1"
-    var radios = document.getElementsByName('champCardJ1');
-
+    let vignettes=document.querySelectorAll(".vignette")
     var selectedValue = null;
 
-    // Parcourir les éléments radio pour trouver celui qui est sélectionné
+
+
+    vignettes.forEach(vignette => {
+        vignette.classList.add(`J2bg`)
+        vignette.textContent="J2"
+    });
+
+
+
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
             selectedValue = radios[i].value;
             break;
         }
     }
+    // Parcourir les éléments radio pour trouver celui qui est sélectionné
 
     // Vérifier si une option a été sélectionnée
     if (selectedValue !== null) {
@@ -265,7 +274,7 @@ function attack(champBattleJ1, champBattleJ2) {
     const player2=document.getElementById("player2")
     function performAttackJ1() {
         ingameJ1Attack = creatRadomNbr(ingameJ1Attack, 3);
-player2Pv.classList.add("atteckAsset")
+    player2Pv.classList.add("atteckAsset")
 
         ingameJ2Pv -= ingameJ1Attack;
 
@@ -273,6 +282,7 @@ player2Pv.classList.add("atteckAsset")
       
         player2Pv.textContent = `- ${ingameJ1Attack}`;
         
+        barrePvFront(player1Pv)
         
         
 
@@ -310,7 +320,7 @@ player2Pv.classList.add("atteckAsset")
         console.log("Attaque de J2   J2Attack  " + ingameJ2Attack + "   J1Pv  " + ingameJ1Pv);
       
         player1Pv.textContent = ` - ${ingameJ2Attack}`;
-        
+        barrePvFront(player2Pv)
         
         ingameJ2Attack = champBattleJ2Attack.champAttack;
         
@@ -375,4 +385,10 @@ function creatRadomNbr(max, min) {
 
 function actualiserPage() {
     location.reload();
+}
+
+
+
+function barrePvFront(test) {
+    
 }
